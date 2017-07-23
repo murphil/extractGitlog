@@ -1,10 +1,9 @@
-extern crate serde_derive;
 extern crate serde_yaml;
 
 use std::fs::File;
 use std::io::prelude::*;
 use std::collections::BTreeMap;
-use serde_yaml::Error;
+use std::error::Error;
 
 #[derive(Debug, PartialEq, Serialize, Deserialize)]
 pub struct Config {
@@ -18,7 +17,7 @@ impl Config {
     let mut f = File::open(path)?;
     let mut contents = String::new();
     f.read_to_string(&mut contents)?;
-    let conf = serde_yaml::from_str(contents).unwrap();
+    let conf = serde_yaml::from_str(&contents).unwrap();
     Ok(conf)
   }
 }
