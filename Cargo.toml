@@ -4,3 +4,6 @@ version = "0.1.0"
 authors = ["murphy <murphy@iffy.me>"]
 
 [dependencies]
+serde = "0.9"
+serde_yaml = "0.6"
+serde_derive = "0.9"

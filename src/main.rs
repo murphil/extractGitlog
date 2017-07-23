@@ -1,3 +1,9 @@
+mod conf;
+use conf::Config;
+
 fn main() {
-    println!("Hello, world!");
+    let config = Config::new("/conf.yml");
+    println!("{:?}", config);
+
+
 }

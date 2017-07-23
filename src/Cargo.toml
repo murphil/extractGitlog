@@ -1,6 +1,0 @@
-[package]
-name = "extractGitlog"
-version = "0.1.0"
-authors = ["murphy <murphy@iffy.me>"]
-
-[dependencies]
