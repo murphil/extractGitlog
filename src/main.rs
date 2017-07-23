@@ -4,8 +4,9 @@ use conf::Config;
 extern crate serde_derive;
 
 fn main() {
-    let config = Config::new("./conf.yml");
-    println!("{:?}", config);
+    let config = Config::new("./conf.yml").unwrap();
+    //config.map(|x| x);
+    println!("{:?}", config.tags.get("U+"));
 
 
 }
