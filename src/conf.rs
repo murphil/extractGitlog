@@ -17,7 +17,7 @@ impl Config {
     let mut f = File::open(path)?;
     let mut contents = String::new();
     f.read_to_string(&mut contents)?;
-    let conf = serde_yaml::from_str(&contents).unwrap();
+    let conf = serde_yaml::from_str(&contents)?;
     Ok(conf)
   }
 }
